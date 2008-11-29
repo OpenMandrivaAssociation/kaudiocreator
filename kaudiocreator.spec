@@ -3,7 +3,7 @@
 Name:          kaudiocreator
 Summary:       CD ripper and audio encoder frontend for KDE4
 Version:       1.2
-Release:       %mkrel 0.%svn.1
+Release:       %mkrel 0.%svn.2
 Source:        %{name}-%{version}.%svn.tar.bz2
 URL:           http://www.kde.org/
 License:       GPL
@@ -11,8 +11,7 @@ Group:         Graphical desktop/KDE
 BuildRoot:     %{_tmppath}/%{name}-buildroot
 BuildRequires: kdemultimedia4-devel
 Requires:      kdebase4-runtime
-
-Conflicts:     kdemultimedia-kaudiocreator < 1:3.5.9-6 
+Obsoletes:     kdemultimedia-kaudiocreator < 1:3.5.10-2
 
 %description
 CD ripper and audio encoder frontend.
