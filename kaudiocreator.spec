@@ -1,6 +1,6 @@
 Name:          kaudiocreator
 Summary:       CD ripper and audio encoder frontend for KDE4
-Version:       1.2.80
+Version:       1.2.81
 Release:       %mkrel 1
 Source:        http://opendesktop.org/CONTENT/content-files/107645-%{name}-%{version}.tar.bz2
 URL:           http://opendesktop.org/content/show.php/KAudioCreator?content=107645
