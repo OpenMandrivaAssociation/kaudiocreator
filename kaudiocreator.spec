@@ -9,6 +9,7 @@ Group:         Graphical desktop/KDE
 BuildRoot:     %{_tmppath}/%{name}-buildroot
 BuildRequires: kdemultimedia4-devel
 BuildRequires: taglib-devel
+BuildRequires: libdiscid-devel
 Requires:      kdebase4-runtime
 Obsoletes:     kdemultimedia-kaudiocreator < 1:3.5.10-2
 
