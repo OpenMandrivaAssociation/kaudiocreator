@@ -1,20 +1,25 @@
 Name:		kaudiocreator
-Summary:	CD ripper and audio encoder frontend for KDE4
+Summary:	CD ripper and audio encoder fron-tend for KDE4
 Version:	1.3
-Release:	%mkrel 1
+Release:	1
 Source:		http://opendesktop.org/CONTENT/content-files/107645-%{name}-%{version}.tar.bz2
 URL:		http://opendesktop.org/content/show.php/KAudioCreator?content=107645
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-BuildRoot:	%{_tmppath}/%{name}-buildroot
-BuildRequires:	kdemultimedia4-devel
-BuildRequires:	taglib-devel
-BuildRequires:	libdiscid-devel
+#kdemulitimedia4-devel missing
+BuildRequires:	kde4-audiocd-devel
+BuildRequires:	libkcddb-devel
+BuildRequires:	libkcompactdisc-devel
+BuildRequires:	juk
+BuildRequires:	kmix
+BuildRequires:	kscd
+BuildRequires:	pkgconfig(taglib)
+BuildRequires:	pkgconfig(libdiscid)
 Requires:	kdebase4-runtime
 Obsoletes:	kdemultimedia-kaudiocreator < 1:3.5.10-2
 
 %description
-CD ripper and audio encoder frontend.
+CD ripper and audio encoder front-end.
 
 %prep
 %setup -q
@@ -24,16 +29,13 @@ CD ripper and audio encoder frontend.
 %make
 
 %install
-%__rm -rf %{buildroot}
 %makeinstall_std -C build
 
 %find_lang %{name}
 
-%clean
-%__rm -rf %{buildroot}
 
 %files -f %{name}.lang
-%defattr(-,root,root)
+%doc Changelog COPYING TODO
 %{_kde_bindir}/kaudiocreator
 %{_kde_datadir}/applications/kde4/kaudiocreator.desktop
 %{_kde_appsdir}/kaudiocreator
@@ -44,4 +46,5 @@ CD ripper and audio encoder frontend.
 %{_kde_datadir}/config.kcfg/kaudiocreator_encoders.kcfg
 %{_kde_iconsdir}/hicolor/*/apps/kaudiocreator.png
 %{_kde_datadir}/kde4/services/ServiceMenus/audiocd_extract.desktop
+
 
