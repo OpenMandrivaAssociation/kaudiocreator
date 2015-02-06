@@ -1,7 +1,7 @@
 Name:		kaudiocreator
 Summary:	CD ripper and audio encoder fron-tend for KDE4
 Version:	1.3
-Release:	1
+Release:	2
 Source:		http://opendesktop.org/CONTENT/content-files/107645-%{name}-%{version}.tar.bz2
 URL:		http://opendesktop.org/content/show.php/KAudioCreator?content=107645
 License:	GPLv2+
