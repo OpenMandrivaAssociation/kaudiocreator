@@ -7,6 +7,7 @@ URL:		https://opendesktop.org/content/show.php/KAudioCreator?content=107645
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 #kdemulitimedia4-devel missing
+BuildRequires:	make
 BuildRequires:	kde4-audiocd-devel
 BuildRequires:	libkcddb-devel
 BuildRequires:	libkcompactdisc-devel
